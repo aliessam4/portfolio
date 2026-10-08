@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Essam // root@cybersec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">root@ali<span class="blink">_</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" onclick="return goTo('about', event)"><span>01.</span>about</a></li>
+      <li><a href="#skills" onclick="return goTo('skills', event)"><span>02.</span>skills</a></li>
+      <li><a href="#services" onclick="return goTo('services', event)"><span>03.</span>services</a></li>
+      <li><a href="#projects" onclick="return goTo('projects', event)"><span>04.</span>projects</a></li>
+      <li><a href="#certs" onclick="return goTo('certs', event)"><span>05.</span>certs</a></li>
+      <li><a href="#ai" onclick="return goTo('ai', event)"><span>06.</span>ask-ai</a></li>
+      <li><a href="#contact" onclick="return goTo('contact', event)"><span>07.</span>contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="hero-top">
+      <div class="hero-text">
+        <div class="prompt-line"><span>guest@world</span>:~$ ./initiate_portfolio.sh</div>
+        <div class="boot-log" id="bootlog"></div>
+
+        <h1 class="name">ALI ESSAM ALI<span class="cursor">&nbsp;</span></h1>
+        <div class="role-line" id="roleline"></div>
+
+        <p class="hero-desc">
+          Artificial Intelligence student at Delta University with a growing focus on
+          cybersecurity, web penetration testing, and ethical hacking. Comfortable in
+          Kali Linux, fluent in Nmap and Wireshark, and building a practical,
+          hands-on skill set across offensive security and AI.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn solid" onclick="return goTo('projects', event)">view_projects()</a>
+          <a href="#ai" class="btn" onclick="return goTo('ai', event)">ask_the_ai_assistant</a>
+          <a href="mailto:aliessam430@gmail.com" class="btn" onclick="return handleEmailClick(event)">aliessam430@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="photo-col">
+        <div class="photo-label">// SUBJECT_SCAN</div>
+        <div class="photo-frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <div class="photo-circle">
+            <div class="photo-scanline"></div>
+            <canvas id="heroPhotoCanvas" class="hero-photo-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-head">
+      <span class="sec-tag">01 //</span>
+      <h2 class="sec-title">whoami<span>.txt</span></h2>
+    </div>
+    <div class="about-box">
+      <p><span class="k">$ cat about.md</span></p>
+      <p>
+        I'm a 4th-year Artificial Intelligence student at Delta University for Science
+        and Technology, based in Alexandria, Egypt. My core interest sits at the
+        intersection of AI and cybersecurity — I spend most of my time learning how
+        systems break, and how to find those weaknesses before someone else does.
+      </p>
+      <p>
+        I work confidently in Linux and Kali Linux environments, using Nmap and
+        Wireshark for network reconnaissance, and Burp Suite, OWASP ZAP, SQLmap, and
+        Metasploit for hands-on web application testing. Alongside security work,
+        I build with Python, C++, Java, and C#, and have shipped academic projects
+        spanning web apps, mobile apps, and machine learning.
+      </p>
+      <div class="about-meta">
+        <div><span class="l">location</span><span class="v">Alexandria, Egypt</span></div>
+        <div><span class="l">focus</span><span class="v">Web Pentesting / Ethical Hacking</span></div>
+        <div><span class="l">education</span><span class="v">B.Sc. Artificial Intelligence (in progress)</span></div>
+        <div><span class="l">status</span><span class="v">open to opportunities</span></div>
+      </div>
+
+      <div class="usp-box">
+        <div class="usp-label">$ cat usp.txt</div>
+        <div class="usp-main">
+          I think like an <span class="hl">attacker</span> and build like an <span class="hl">engineer</span> — combining hands-on web penetration testing with an AI student's eye for pattern and anomaly detection, so I catch what automated scanners miss.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-head">
+      <span class="sec-tag">02 //</span>
+      <h2 class="sec-title">skills<span>/</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>security</h3>
+        <div class="skill-tags">
+          <span>Web Penetration Testing</span>
+          <span>Ethical Hacking</span>
+          <span>Network Pentesting</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>tools</h3>
+        <div class="skill-tags">
+          <span>Kali Linux</span>
+          <span>Linux</span>
+          <span>Nmap</span>
+          <span>Wireshark</span>
+          <span>Burp Suite</span>
+          <span>OWASP ZAP</span>
+          <span>SQLmap</span>
+          <span>Metasploit</span>
+          <span>Gobuster</span>
+          <span>TCP/IP</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>programming</h3>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>C++</span>
+          <span>Java</span>
+          <span>C#</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>web_and_db</h3>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>SQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>ai_ml</h3>
+        <div class="skill-tags">
+          <span>Machine Learning</span>
+          <span>Computer Vision</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>design_and_mobile</h3>
+        <div class="skill-tags">
+          <span>UI/UX</span>
+          <span>Figma</span>
+          <span>Flutter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="sec-head">
+      <span class="sec-tag">03 //</span>
+      <h2 class="sec-title">services<span>.offer()</span></h2>
+    </div>
+    <p style="font-size:13.5px;color:#9fd9b0;margin-bottom:28px;line-height:1.8;max-width:640px;">
+      Working as a <span style="color:var(--green);">Vulnerability Analyst &amp; Penetration Tester</span> —
+      here's what I can help with:
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Web Application Penetration Testing</h3>
+        <p>Manual and tool-assisted testing of web apps for OWASP Top 10 issues — injection, broken auth, XSS, misconfigurations — using Burp Suite, OWASP ZAP, and SQLmap.</p>
+        <div class="service-tags"><span>Burp Suite</span><span>OWASP ZAP</span><span>SQLmap</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Network Penetration Testing</h3>
+        <p>Scanning, mapping, and probing network infrastructure for exposed services, weak configurations, and exploitable entry points using Nmap, Wireshark, and Metasploit.</p>
+        <div class="service-tags"><span>Nmap</span><span>Wireshark</span><span>Metasploit</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Vulnerability Assessment &amp; Analysis</h3>
+        <p>Identifying, classifying, and prioritizing security weaknesses across systems and applications, with clear write-ups of impact and risk level.</p>
+        <div class="service-tags"><span>Recon</span><span>Risk Analysis</span><span>Gobuster</span></div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Security Reporting &amp; Recommendations</h3>
+        <p>Turning findings into clear, actionable reports — what's broken, how it can be exploited, and practical steps to fix it.</p>
+        <div class="service-tags"><span>Documentation</span><span>Remediation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-head">
+      <span class="sec-tag">04 //</span>
+      <h2 class="sec-title">projects<span>.log</span></h2>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top"><h3>Smart Home System</h3><span class="yr">2026</span></div>
+      <ul>
+        <li>Collaborated with a team to design and develop a Smart Home system.</li>
+        <li>Worked across system development, testing, and final presentation.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top"><h3>Smart Guide — Web Application</h3><span class="yr">2025</span></div>
+      <ul>
+        <li>Developed a web-based Smart Guide application as an academic project.</li>
+        <li>Applied web development concepts to build a user-friendly interface.</li>
+        <li>Involved in the full design, development, and testing cycle.</li>
+      </ul>
+      <a href="https://github.com/aliessam4/Smart-Guide-Web-Application" target="_blank" rel="noopener" class="proj-link">view_on_github &rarr;</a>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top"><h3>Tumor Hunter — Mobile Application</h3><span class="yr">2024</span></div>
+      <ul>
+        <li>Built a mobile app for brain tumor detection and analysis as a university project.</li>
+        <li>Designed, developed, and tested the app using Flutter.</li>
+        <li>Collaborated with a team on the interface and core functionality.</li>
+      </ul>
+      <a href="https://github.com/aliessam4/Braintumor-main" target="_blank" rel="noopener" class="proj-link">view_on_github &rarr;</a>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section id="certs">
+    <div class="sec-head">
+      <span class="sec-tag">05 //</span>
+      <h2 class="sec-title">certifications<span>[]</span></h2>
+    </div>
+    <div class="about-box cert-list">
+      <div class="cert-row"><span class="yr">2026</span><span class="name">Digital Egypt Pioneers Initiative (DEPI)</span><span class="org">DEPI</span></div>
+      <div class="cert-row"><span class="yr">2024</span><span class="name">Machine Learning Specialization</span><span class="org">Coursera</span></div>
+      <div class="cert-row"><span class="yr">2023</span><span class="name">Network Penetration Testing</span><span class="org">Information</span></div>
+    </div>
+  </section>
+
+  <!-- AI ASSISTANT -->
+  <section id="ai">
+    <div class="sec-head">
+      <span class="sec-tag">06 //</span>
+      <h2 class="sec-title">ask_ai<span>()</span></h2>
+    </div>
+    <p style="font-size:13px;color:#9fd9b0;margin-bottom:22px;line-height:1.8;">
+      A small AI assistant trained on this CV. Ask it about my skills, projects,
+      certifications, or how to get in touch — it answers as me, in the first person.
+    </p>
+
+    <div class="suggest-row">
+      <button onclick="askSuggested('What are Ali\'s strongest cybersecurity skills?')">strongest security skills?</button>
+      <button onclick="askSuggested('Tell me about the Tumor Hunter project')">tumor hunter project?</button>
+      <button onclick="askSuggested('Is Ali available for freelance work?')">available for work?</button>
+      <button onclick="askSuggested('What certifications does Ali have?')">certifications?</button>
+    </div>
+
+    <div class="terminal">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">ali-ai — bash — 80x24</span>
+      </div>
+      <div id="chatlog">
+        <div class="msg-sys">[system] AI assistant initialized. Trained on Ali Essam's CV. Ask in Arabic or English — اسأل بالعربي أو الإنجليزي.</div>
+      </div>
+      <div class="term-input-row">
+        <span>&gt;</span>
+        <input id="chatinput" type="text" placeholder="اكتب سؤالك بالعربي أو English..." autocomplete="off" />
+        <button id="sendbtn" onclick="sendChat()">send</button>
+      </div>
+    </div>
+    <div class="term-hint">tip: press Enter to send · works in Arabic & English · this assistant only knows what's in the CV above</div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <h2>./connect<span>()</span></h2>
+    <p># let's talk security, AI, or opportunities</p>
+    <div class="contact-links">
+      <a href="mailto:aliessam430@gmail.com" class="btn solid" id="emailbtn" onclick="return handleEmailClick(event)">email</a>
+      <a href="https://linkedin.com/in/ali-essam-114327296" target="_blank" class="btn">linkedin</a>
+      <a href="https://wa.me/201220688937?text=Hi%20Ali%2C%20I%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out!" target="_blank" rel="noopener" class="btn">whatsapp</a>
+    </div>
+    <div class="foot-note">Alexandria, Egypt // built with a terminal aesthetic // 2026</div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
